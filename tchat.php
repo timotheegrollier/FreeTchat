@@ -17,15 +17,15 @@ $theTime = $localHour . date(":i:s");
 </head>
 
 <body>
-    <form action="tchat_post.php" method="POST" class="container-fluid">
+    <form action="tchat_post.php" method="POST" class="container-fluid" onsubmit="return checkBeforeSubmit()">
         <input type="text" name="message" class="form-control" autofocus>
         <input type="hidden" name="time" value=<?php echo $theTime ?>>
-        <input type="submit" class="btn btn-primary col-10 col-sm-6 mb-5">
+        <input type="submit" id="subBtn" class="btn btn-primary col-10 col-sm-6 mb-5">
     </form>
 
     <div class="tchat-container">
 
-        <div class="tchat" id="chatbox">
+        <div class="tchat" id="tchatbox">
 
             <?php
         $sql = "SELECT text , heure FROM message";
