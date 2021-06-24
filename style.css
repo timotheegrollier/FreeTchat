@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -78,12 +78,17 @@ border-radius: 10px;
 
 .logo-text{
   position: absolute;
-  bottom: -30px;
+  background: rgba(0, 0, 0, 0.384);
+  height: 70%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
 }
 
 h1{
   font-size: 1.5rem;
-  color: rgb(27, 9, 6);
+  color: white;
+  
 
 }
 

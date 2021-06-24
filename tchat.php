@@ -19,7 +19,7 @@ $theTime = date("H:i:s");
 
 <body>
     <form action="tchat_post.php" method="POST" class="container-fluid entries" onsubmit="return checkBeforeSubmit()">
-        <input type="text" name="message" class="form-control mb-5" autofocus>
+        <input type="text" name="message" class="form-control mb-5" autofocus autocomplete="off">
         <input type="hidden" name="time" value=<?php echo $theTime ?>>
         <input type="submit" id="subBtn" class="btn btn-primary col-10 col-sm-6 mb-5">
     </form>
