@@ -17,8 +17,8 @@ $theTime = $localHour . date(":i:s");
 </head>
 
 <body>
-    <form action="tchat_post.php" method="POST" class="container-fluid" onsubmit="return checkBeforeSubmit()">
-        <input type="text" name="message" class="form-control" autofocus>
+    <form action="tchat_post.php" method="POST" class="container-fluid entries" onsubmit="return checkBeforeSubmit()">
+        <input type="text" name="message" class="form-control mb-5" autofocus>
         <input type="hidden" name="time" value=<?php echo $theTime ?>>
         <input type="submit" id="subBtn" class="btn btn-primary col-10 col-sm-6 mb-5">
     </form>
@@ -33,7 +33,7 @@ $theTime = $localHour . date(":i:s");
         ?>
             <ul class="result"><?php
                             while ($u = $result->fetch(PDO::FETCH_ASSOC)) {
-                                echo "<li><span class='mark'>" . $u["heure"] . "</span> "  . $u["text"] . "</li>";
+                                echo "<li>"  . $u["text"] . "<span class='mark'>" . $u["heure"] . "</span> </li><hr>";
                             } ?>
             </ul>
         </div>

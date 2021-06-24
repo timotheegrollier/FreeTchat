@@ -1,3 +1,9 @@
+*{
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -18,8 +24,7 @@ form {
 
 input[type="text"] {
   width: 80%;
-  height: 100px;
-  margin-bottom: 50px;
+  height: 50px;
 }
 .tchat-container{
   display: flex;
@@ -38,8 +43,26 @@ input[type="text"] {
   overflow-y: scroll;
 
 }
+
+
+.entries{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px !important;
+}
 .mark{
-padding:0.1em !important;}
+padding:0.1em !important;
+background-color: #0d6efd !important;
+border-radius: 10px;
+}
 
 .logo{
   position: relative;
@@ -72,3 +95,4 @@ h1{
     width: 90%;
   }
 }
+
