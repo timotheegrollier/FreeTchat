@@ -1,8 +1,6 @@
 <?php
 
-$DB_DSN = "mysql:host=mysql-franky.alwaysdata.net;dbname=franky_tchat";
-$DB_USER = "franky_timo";
-$DB_PASS = "xx123xx";
+
 // $DB_DSN = "mysql:host=localhost;dbname=tchat";
 // $DB_USER = "root";
 // $DB_PASS = "";

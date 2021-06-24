@@ -1,1 +1,1 @@
-<?php require __DIR__ . "./tchat.php";
+<?php require __DIR__ . "/tchat.php";
