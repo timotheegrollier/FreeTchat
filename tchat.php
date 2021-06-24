@@ -1,10 +1,10 @@
 <?php require __DIR__ . "/db_config.php"; ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <?php
-$localHour = date("h") + 2;
-$theTime = $localHour . date(":i:s");
+// $localHour = date("h") + 2;
+$theTime = date("H:i:s");
 ?>
 
 <head>
