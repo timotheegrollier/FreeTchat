@@ -17,14 +17,16 @@ $theTime = $localHour . date(":i:s");
 </head>
 
 <body>
-    <form action="chat_post.php" method="POST" class="container-fluid>
+    <form action="chat_post.php" method="POST" class="container-fluid">
         <input type="text" name="message" class="form-control">
         <input type="hidden" name="time" value=<?php echo $theTime ?>>
-        <input type="submit" class="btn btn-primary col-6">
+        <input type="submit" class="btn btn-primary col-10 col-sm-6 mb-5">
     </form>
+
     <div class="chat-container">
-        
+
         <div class="chat">
+
             <?php
         $sql = "SELECT text , heure FROM message";
         $result = $PDO->query($sql);
@@ -36,6 +38,12 @@ $theTime = $localHour . date(":i:s");
             </ul>
         </div>
         <a href="deleteChat.php">❌</a>
+    </div>
+    <div class="logo d-flex align-items-center justify-content-center flex-column mt-2">
+        <div class="logo-text">
+            <h1>F**CKING CHAT</h1>
+        </div>
+        <div class="logo-img"></div>
     </div>
 
 </body>

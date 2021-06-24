@@ -18,8 +18,9 @@ form {
 
 input[type="text"] {
   padding: 5px;
-  width: 50%;
-  margin-bottom: 20px;
+  width: 80%;
+  height: 100px;
+  margin-bottom: 50px;
 }
 .chat-container{
   display: flex;
@@ -30,8 +31,8 @@ input[type="text"] {
 }
 .chat {
   border: 1px solid black;
-  height: 50%;
-  width: 50%;
+  height: 70%;
+  width: 70%;
   background: rgba(128, 128, 128, 0.568);
   box-shadow: 2px 2px 3px;
   overflow-y: scroll;
@@ -39,3 +40,35 @@ input[type="text"] {
 }
 .mark{
 padding:0.1em !important;}
+
+.logo{
+  position: relative;
+}
+
+
+.logo-img{
+  border-radius: 50px;
+  width: 25%;
+  height: 90px;
+  background: url("./nourrir-son-chat_shutterstock_1031589889-removebg-preview.png") center/cover ;
+}
+
+.logo-text{
+  position: absolute;
+  bottom: -30px;
+}
+
+h1{
+  font-size: 1.5rem;
+  color: rgb(27, 9, 6);
+
+}
+
+@media (max-width:576px) {
+  .logo-img{
+    width: 40%;
+  }
+  .chat{
+    width: 90%;
+  }
+}
