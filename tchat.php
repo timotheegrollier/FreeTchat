@@ -13,7 +13,8 @@ $theTime = $localHour . date(":i:s");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>FreeTchat</title>
+    <link rel="icon" type="image/png" href="./img/cat-hiss-icon.png" />
+    <title>FreeTchat | <?=  date("l d ") . "of " . date("F");  ?></title>
 </head>
 
 <body>
