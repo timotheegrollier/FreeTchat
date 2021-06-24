@@ -11,6 +11,6 @@ if (!isset($_GET["delete"])) {
 
 
 if ($sql) {
-    header('Location: ./chat.php');
+    header('Location: ./tchat.php');
     exit();
 }

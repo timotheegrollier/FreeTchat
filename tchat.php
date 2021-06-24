@@ -13,19 +13,19 @@ $theTime = $localHour . date(":i:s");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
-    <title>Chat</title>
+    <title>FreeTchat</title>
 </head>
 
 <body>
-    <form action="chat_post.php" method="POST" class="container-fluid">
-        <input type="text" name="message" class="form-control">
+    <form action="tchat_post.php" method="POST" class="container-fluid">
+        <input type="text" name="message" class="form-control" autofocus>
         <input type="hidden" name="time" value=<?php echo $theTime ?>>
         <input type="submit" class="btn btn-primary col-10 col-sm-6 mb-5">
     </form>
 
-    <div class="chat-container">
+    <div class="tchat-container">
 
-        <div class="chat">
+        <div class="tchat" id="chatbox">
 
             <?php
         $sql = "SELECT text , heure FROM message";
@@ -37,15 +37,18 @@ $theTime = $localHour . date(":i:s");
                             } ?>
             </ul>
         </div>
-        <a href="deleteChat.php">❌</a>
+        <a href="deleteTchat.php">❌</a>
     </div>
     <div class="logo d-flex align-items-center justify-content-center flex-column mt-2">
         <div class="logo-text">
-            <h1>F**CKING CHAT</h1>
+            <h1>FREE TCHAT</h1>
         </div>
         <div class="logo-img"></div>
     </div>
 
+
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

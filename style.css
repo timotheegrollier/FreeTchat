@@ -17,19 +17,19 @@ form {
 }
 
 input[type="text"] {
-  padding: 5px;
   width: 80%;
   height: 100px;
   margin-bottom: 50px;
 }
-.chat-container{
+.tchat-container{
   display: flex;
   justify-content: center;
   height: 100%;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
-.chat {
+.tchat {
   border: 1px solid black;
   height: 70%;
   width: 70%;
@@ -68,7 +68,7 @@ h1{
   .logo-img{
     width: 40%;
   }
-  .chat{
+  .tchat{
     width: 90%;
   }
 }
