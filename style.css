@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+ul{
+  list-style-type: none;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.chat-container{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+.chat {
+  border: 1px solid black;
+  height: 50%;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.568);
+  box-shadow: 2px 2px 3px;
+  overflow-y: scroll;
+
+}
+.mark{
+padding:0.1em !important;}
