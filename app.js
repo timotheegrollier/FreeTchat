@@ -5,6 +5,7 @@ function getMessages() {
 
 
     requeteAjax.onload = () => {
+
         const resultat = JSON.parse(requeteAjax.responseText);
         const html = resultat.map((message) => {
             return `<li>${message.text}<span class='mark'>${message.heure}</span> </li><hr>`
@@ -14,6 +15,9 @@ function getMessages() {
         
         messages.innerHTML = html;
         
+        setTimeout(()=>{
+            chat.scroll(0, chat.scrollHeight);
+        },120)
     }
     requeteAjax.send();
 }
@@ -40,7 +44,9 @@ const requeteAjax = new XMLHttpRequest();
 requeteAjax.open("POST",'tchat_post.php');
 requeteAjax.onload = function(){
     message.value = "";
+    message.focus();
     getMessages();
+
 }
 requeteAjax.send(data);
 
@@ -48,4 +54,20 @@ requeteAjax.send(data);
 }
 
 
+
+function deleteTchat()
+{
+    const requeteAjax = new XMLHttpRequest();
+    requeteAjax.open("DELETE", "deleteTchat.php");
+    requeteAjax.onload = () => {
+    getMessages();
+    }
+    
+    requeteAjax.send();
+
+}
+
 document.querySelector('form').addEventListener('submit',postMessages);
+let delBtn = document.querySelector(".trash");
+
+delBtn.addEventListener("click",deleteTchat);

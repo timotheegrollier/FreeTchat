@@ -14,17 +14,19 @@ $theTime = date("H:i:s");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="./img/cat-hiss-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>FreeTchat | <?=  date("l d ") . "of " . date("F");  ?></title>
 </head>
 
 <body>
-    <form action="tchat_post.php?action=write" method="POST" class="container-fluid entries">
-        <input type="text" id="message" name="message" class="form-control mb-5" autofocus autocomplete="off">
+    <form action="" method="POST" class="container-fluid entries mb-3">
+        <input type="text" id="message" name="message" class="form-control mb-3" autofocus autocomplete="off">
         <input type="hidden" id="time" name="time" value=<?php echo $theTime ?>>
         <input type="submit" id="subBtn" class="btn btn-primary col-10 col-sm-6 mb-5">
     </form>
 
     <div class="tchat-container">
+        <div class="trash"><i class="fas fa-trash"></i></div>
 
         <div class="tchat" id="tchatbox">
 
@@ -32,8 +34,8 @@ $theTime = date("H:i:s");
             <ul class="result">
             </ul>
         </div>
-        <a href="deleteTchat.php">❌</a>
     </div>
+
     <div class="logo d-flex align-items-center justify-content-center flex-column mt-2">
         <div class="logo-text">
             <h1>FREE TCHAT</h1>

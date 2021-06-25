@@ -1,8 +1,8 @@
 
 let chat = document.getElementById("tchatbox");
-let wasSubmitted = false;
 let btn = document.getElementById("subBtn");
 
+document.querySelector('form').addEventListener('submit',checkBeforeSubmit);
 
 
 
@@ -15,13 +15,9 @@ let btn = document.getElementById("subBtn");
 
 window.addEventListener("load", () => {
   getMessages();
-  setTimeout(()=>{
-    chat.scroll(0, chat.scrollHeight);
-  },300)
   setInterval(()=>{
     getMessages();
-    chat.scroll(0, chat.scrollHeight);
-  },500)
+  },1500)
 });
 
 
@@ -29,10 +25,10 @@ window.addEventListener("load", () => {
 
 
 function checkBeforeSubmit() {
-  btn.setAttribute("disabled","");
-  setInterval(()=>{
-    btn.removeAttribute("disabled")
-  },1500)
+  btn.disabled = true;
+  setTimeout(()=>{
+    btn.disabled = false;
+  },800)
    
 }
 

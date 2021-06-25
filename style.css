@@ -28,7 +28,7 @@ input[type="text"] {
 }
 .tchat-container{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 100%;
   align-items: center;
   flex-direction: column;
@@ -36,8 +36,8 @@ input[type="text"] {
 }
 .tchat {
   border: 1px solid black;
-  height: 70%;
-  width: 70%;
+  height: 80%;
+  width: 80%;
   background: rgba(128, 128, 128, 0.568);
   box-shadow: 2px 2px 3px;
   overflow-y: scroll;
@@ -89,7 +89,22 @@ h1{
   font-size: 1.5rem;
   color: white;
   
+}
 
+.trash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trash .fas {
+  font-size: 2rem;
+  color: #0d6efd;
+}
+
+.trash .fas:hover{
+  color: red;
+  cursor: pointer;
 }
 
 @media (max-width:576px) {

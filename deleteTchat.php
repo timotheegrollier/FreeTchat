@@ -8,9 +8,3 @@ if (!isset($_GET["delete"])) {
 } else {
     echo "erreur!";
 }
-
-
-if ($sql) {
-    header('Location: ./tchat.php');
-    exit();
-}
