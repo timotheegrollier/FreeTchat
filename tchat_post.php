@@ -15,7 +15,5 @@ if (!empty($_POST["message"])) {
     var_dump($data['message']);
     var_dump($_POST['time']);
     $sql->execute(array("message" => $data["message"], "heure" => $_POST["time"]));
-    header("location:index.php");
 } else {
-    header("location:index.php");
 }

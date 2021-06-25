@@ -3,10 +3,7 @@ let chat = document.getElementById("tchatbox");
 let wasSubmitted = false;
 let btn = document.getElementById("subBtn");
 
-setInterval(()=>{
-  chat.scroll(0, chat.scrollHeight);
-  getMessages();
-},1000)
+
 
 
 
@@ -20,7 +17,11 @@ window.addEventListener("load", () => {
   getMessages();
   setTimeout(()=>{
     chat.scroll(0, chat.scrollHeight);
-  },600)
+  },300)
+  setInterval(()=>{
+    getMessages();
+    chat.scroll(0, chat.scrollHeight);
+  },500)
 });
 
 
@@ -28,11 +29,11 @@ window.addEventListener("load", () => {
 
 
 function checkBeforeSubmit() {
-    btn.setAttribute("disabled","")
-  if (!wasSubmitted) {
-    wasSubmitted = true;
-    return wasSubmitted;
-  }
-  return false;
+  btn.setAttribute("disabled","");
+  setInterval(()=>{
+    btn.removeAttribute("disabled")
+  },1500)
+   
 }
+
 
