@@ -39,7 +39,7 @@ $theTime = date("H:i:s");
 
     <div class="logo d-flex align-items-center justify-content-center flex-column mt-2">
         <div class="logo-text">
-            <h1>FREE TCHAT</h1>
+            <h1>TIMS</h1>
         </div>
         <div class="logo-img"></div>
     </div>
