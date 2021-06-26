@@ -20,30 +20,33 @@ $theTime = date("H:i:s");
 </head>
 
 <body>
-    <form action="" method="POST" class="container-fluid entries mb-3">
-        <input type="text" id="message" name="message" class="form-control mb-3" autofocus autocomplete="off">
-        <input type="hidden" id="time" name="time" value=<?php echo $theTime ?>>
-        <input type="submit" id="subBtn" class="btn btn-primary col-10 col-sm-6 mb-5">
-    </form>
+    <div class="tchatContainer d-flex flex-column-reverse justify-content-around">
 
-    <div class="tchat-container">
-        <div class="trash"><i class="fas fa-trash"></i></div>
+        <form action="" method="POST" class="container-fluid entries ">
+            <input type="text" id="message" name="message" class="form-control mb-3" autofocus autocomplete="off">
+            <input type="hidden" id="time" name="time" value=<?php echo $theTime ?>>
+            <input type="submit" id="subBtn" class="btn btn-primary col-10 col-sm-6 ">
+        </form>
 
-        <div class="tchat" id="tchatbox">
+        <div class="tchat-container">
+            <div class="trash"><i class="fas fa-trash"></i></div>
+
+            <div class="tchat" id="tchatbox">
 
 
-            <ul class="result">
-            </ul>
+                <ul class="result">
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div class="logo d-flex align-items-center justify-content-center flex-column mt-2">
-        <div class="logo-text">
-            <h1>TIMS</h1>
+        <div class="logo d-flex align-items-center justify-content-center flex-column">
+            <div class="logo-text">
+                <h1>TIMS</h1>
+            </div>
+            <div class="logo-img"></div>
         </div>
-        <div class="logo-img"></div>
-    </div>
 
+    </div>
 
     <script src="app.js"></script>
     <script src="script.js"></script>
