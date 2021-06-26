@@ -1,4 +1,5 @@
 <?php require __DIR__ . "/db_config.php"; ?>
+<?php require __DIR__ . "/date.php"; ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +16,7 @@ $theTime = date("H:i:s");
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="./img/cat-hiss-icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>FreeTchat | <?=  date("l d ") . "of " . date("F");  ?></title>
+    <title>Tims | <?=  dateToFrench("now" ,"l j F Y");  ?></title>
 </head>
 
 <body>
