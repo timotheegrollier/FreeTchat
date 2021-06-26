@@ -46,7 +46,6 @@ requeteAjax.onload = function(){
     message.value = "";
     message.focus();
     getMessages();
-
 }
 requeteAjax.send(data);
 
@@ -61,6 +60,11 @@ function deleteTchat()
     requeteAjax.open("DELETE", "deleteTchat.php");
     requeteAjax.onload = () => {
     getMessages();
+    trash.style.color = "red";
+
+    setTimeout(()=>{
+        trash.style.color = "#0d6efd";
+    },450)
     }
     
     requeteAjax.send();
@@ -69,5 +73,6 @@ function deleteTchat()
 
 document.querySelector('form').addEventListener('submit',postMessages);
 let delBtn = document.querySelector(".trash");
+let trash = document.querySelector(".trash .fas");
 
 delBtn.addEventListener("click",deleteTchat);
